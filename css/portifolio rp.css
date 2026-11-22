@@ -278,7 +278,6 @@ body.escuro p{
         padding: 2rem;
         left: 0;
         transform: none;
-        border: 1px solid red;
     }
     .rodape{
         position: static;
