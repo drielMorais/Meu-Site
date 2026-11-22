@@ -1,0 +1,253 @@
+/*----------------FONTES-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&family=Bebas+Neue&family=Chewy&family=Crafty+Girls&family=Electrolize&family=Life+Savers:wght@400;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*----------------PADRONIZAÇÃO E ESTRUTURA------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E4E4E4;
+}
+/*----------------CABEÇALHO------------------*/
+#nave{
+    display: flex;
+    border-radius: 0 0 2rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 0 clamp(2rem, 5vw, 6rem);  
+    box-shadow: 0 8px 30px rgba(28, 28, 28, 0.25);
+    background-color: #E4E4E4;
+}
+/*----------------LINKS DO CABEÇALHO---------------*/
+#links{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    list-style-type: none;
+}
+/*----------------ICONES DE LUZ E SIMBOLO---------------*/
+.icon-pai, .pai-luz{
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 4rem;
+    height: 5rem;
+    display: flex;
+}
+/*----------------TEXTO DO LINK------------------*/
+li a{
+    color: #1C1C1C;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+/*---------------PNG DE LUZ-----------------------*/
+#luz{
+    display: flex;
+    width: max(2rem);
+    cursor: pointer;
+}
+/*---------------ICONE (AM)-----------------------*/
+#icone{
+    display: flex;
+    width: max(4rem);
+    height: auto;
+}
+/*---------------------CORPO DO SITE-----------------*/
+#corpo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    min-height: 40rem;
+}
+/*-----------------BLOCO 1 E TODOS OS FILHOS----------------*/
+.bloco1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 40rem;
+
+}
+/*-----------------TÍTULO PRINCIPAL------------------------*/
+h1{
+    display: flex;
+    font-family: "Agrave Pro", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: clamp(3.5rem, 5vh, 6rem);
+    font-weight: 100;
+    text-align: center;
+    line-height: 4rem;
+}
+/*-----------------TEXTO SECUNDÁRIO------------------------*/
+b{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    border-radius: 1rem;
+    font-size: clamp(3rem, 5vh, 3rem);
+    font-weight: 200;
+    background-color: #1C1C1C;
+    color: #E4E4E4;
+}
+/*-----------------BLOCO 2 E TODOS OS FILHOS----------------*/
+.bloco2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 40rem;
+}
+/*-----------------MINHA IMAGEM-----------------------------*/
+.eu{
+    display: flex;
+    width: 10px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: max(30rem);
+}
+/*---------------------FIM DO CORPO DO SITE-----------------*/
+
+/*---------------------RODAPÉ-----------------*/
+.rodape{
+    position: fixed;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    height: 4.5rem;
+    bottom: 0;
+    left: 0;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #E4E4E4;
+    box-shadow: 0 -8px 30px rgba(28, 28, 28, 0.25);
+}
+/*---------------------TEXTO DO RODAPÉ-----------------------*/
+p {
+    font-size: clamp(0.5rem, 2vh, 1.5rem);
+    color: gray;
+}
+/*---------------MODO ESCURO------------------*/
+body.escuro{
+    background-color:  #1C1C1C;
+}
+body.escuro #nave{
+    background-color:  #1C1C1C;
+    box-shadow: 0 0px 30px rgba(198, 255, 51, 0.25);
+}
+body.escuro #luz {
+    content: url("../img/luz-0.png");
+}
+body.escuro #icone{
+    content: url("../img/Icon_wt.png");
+}
+body.escuro #links a{
+    color: #E4E4E4;
+}
+body.escuro #links a:hover{
+    color: #C6FF33;
+}
+body.escuro .eu{
+    content: url("../img/eu_bk.png");
+}
+body.escuro h1{
+    color: #E4E4E4;
+}
+body.escuro b{
+    background-color: #C6FF33;
+    color: #1c1c1c
+}
+body.escuro .rodape{
+    background-color: #1c1c1c;
+    box-shadow: 0 0px 30px rgba(198, 255, 51, 0.25);
+}
+body.escuro p{
+    color: #E4E4E4;
+}
+/*-------------FIM DO MODO ESCURO--------------*/
+
+/*-------------TELAS DE ATÉ 1024px (Tablets)-------------*/
+@media (max-width: 1024px){
+    #nave{
+        gap: 2rem
+    }
+    #links{
+        font-size: clamp(0.5rem, 1.2vh, 1.5rem);
+        gap: 2.5rem;
+    }
+    .bloco1{
+        min-height: 85vh;
+    }
+    h1{
+        font-size: clamp(3rem, 5vh, 7rem);
+    }
+    b{
+        font-size: clamp(1.5rem, 3vh, 5rem);
+        height: 5rem;
+    }
+    .bloco2{
+        min-height: 85vh;
+        justify-content: center;
+    }
+    .eu{
+        width: 80%;
+    }
+    .rodape{
+        padding-top: 1.5rem;
+    }
+    .rodape p{
+        font-size: clamp(0.5rem, 1.5vh, 3rem);
+    }
+}
+/*---------------TELAS DE ATÉ 767px - (SmarthPhone) -------------*/
+@media (max-width: 767px){
+    #nave{
+        padding-right: 5rem;
+        padding-left: 3rem;
+        justify-content: center;
+        height: auto;
+    }
+    #links{
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    #links a{
+        font-size: clamp(0.5rem, 1.3vh, 3rem);
+    }
+    #icone{
+        display: none;
+    }
+    #luz{
+        display: flex;
+        padding: 0.1rem;
+    }
+    #corpo{
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+    .bloco1, .bloco2{
+        min-height: 0;
+        height: auto;
+        padding: 1rem;
+    }
+    .bloco2{
+        padding-top: 2rem;
+    }
+    h1{
+        padding: 1rem;
+        font-size: clamp(2.5rem, 3vh, 3rem);
+        line-height: 3rem;
+    }
+    .eu{
+        width: max(70%)
+    }
+}

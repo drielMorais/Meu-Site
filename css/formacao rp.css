@@ -1,0 +1,214 @@
+/*----------------FONTES-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&family=Bebas+Neue&family=Chewy&family=Crafty+Girls&family=Electrolize&family=Life+Savers:wght@400;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*----------------PADRONIZAÇÃO E ESTRUTURA------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*------------------COR DO CORPO DO TEXTO-------------------*/
+body{
+    background-color: #E4E4E4;
+}
+/*----------------CABEÇALHO------------------*/
+#nave{
+    display: flex;
+    border-radius: 0 0 2rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 0 clamp(2rem, 5vw, 6rem);  
+    box-shadow: 0 8px 30px rgba(28, 28, 28, 0.25);
+    background-color: #E4E4E4; 
+}
+/*----------------LINKS DO CABEÇALHO---------------*/
+#links{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    list-style-type: none;
+}
+/*----------------ICONES DE LUZ E SIMBOLO---------------*/
+.icon-pai, .pai-luz{
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    width: 4rem;
+    height: 5rem;
+    display: flex;
+}
+/*----------------TEXTO DO LINK------------------*/
+li a{
+    color: #1C1C1C;
+    text-decoration: none;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+/*---------------PNG DE LUZ-----------------------*/
+#luz{
+    display: flex;
+    width: max(2rem);
+    cursor: pointer;
+}
+/*---------------ICONE (AM)-----------------------*/
+#icone{
+    display: flex;
+    width: max(4rem);
+    height: auto;
+}
+/*---------------CORPO DO SITE-------------------*/
+.formacao{
+    display: flex;
+    width: 100%;
+    height: 85vh;
+}
+.formacao div{
+    display: flex;
+    width: 100vw;
+    padding: 5rem 0 0 3rem;
+}
+/*----------------BARRAS DE CURSOS-------------------*/
+.lista-cursos{
+    justify-content: center;
+}
+/*------------------ÁREA INTERNA DAS BARRAS-------------------*/
+div li{
+    display: grid;
+    transition: 0.4s;
+    padding: 2rem;
+    margin-bottom: 0.5rem;
+    width: 70rem;
+    background-color: #E4E4E4;
+    border-radius: 1rem;
+    color: #1C1C1C;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+/*------------------AUMENTO DE ESCALA DAS ÁREAS INTERNAS DAS BARRAS-------------------*/
+div li:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+/*---------------------RODAPÉ-----------------*/
+.rodape{
+    position: fixed;
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    height: 4.5rem;
+    bottom: 0;
+    left: 0;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #E4E4E4;
+    box-shadow: 0 -8px 30px rgba(28, 28, 28, 0.25);
+}
+/*---------------------TEXTO DO RODAPÉ-----------------------*/
+p {
+    font-size: clamp(0.5rem, 2vh, 1.5rem);
+    color: gray;
+}
+/*---------------MODO ESCURO------------------*/
+/*---------------CORPO DO TEXTO ESCURO-------------*/
+body.escuro{
+    background-color: #1C1C1C;
+}
+/*---------------CABEÇALHO----------------*/
+body.escuro #nave{
+    background-color: #1C1C1C;
+    box-shadow: 0 8px 30px rgba(198, 255, 51, 0.25);
+}
+/*---------------ÍCONE DO CABEÇALHO----------------*/
+body.escuro #icone{
+    content: url("../img/Icon_wt.png");
+}
+/*---------------TROCA DO ÍCONE DE LUZ----------------*/
+body.escuro #luz{
+    content: url("../img/luz-0.png");
+}
+/*--------------COR DOS LINKS-----------------*/
+body.escuro #links li a{
+    color: #E4E4E4
+}
+/*---------------EFEITO DO MOUSE AO PASSAR POR CIMA----------------*/
+body.escuro #links a:hover{
+    color: #C6FF33;
+}
+/*--------------COR DAS BARRAS----------------*/
+body.escuro div li{
+    background-color: #1C1C1C;
+    border: 1px solid #E4E4E4;
+    color: #E4E4E4
+}
+/*---------------AUMENTO DE ESCALA DAS BARRAS----------------*/
+body.escuro div li:hover{
+    box-shadow: 0px 5px 10px #C6FF33;
+}
+/*---------------RODAPÉ----------------*/
+body.escuro .rodape{
+    background-color: #1C1C1C;
+    box-shadow: 0 8px 30px rgba(198, 255, 51, 0.25);
+}
+/*---------------TEXTO DO RODAPÉ----------------*/
+body.escuro .rodape p{
+    color: #E4E4E4
+}
+/*----------------FIM DO MODO ESCURO--------------*/
+
+/*-------------TELAS DE ATÉ 1024px (TABLETS)-------------*/
+@media (max-width: 1024px){
+    #nave{
+        gap: 2rem;  
+    }
+    #links{
+        font-size: clamp(0.5rem, 1.2vh, 1.5rem);
+        gap: 2.5rem;
+    }
+    .formacao div{
+        padding: 0;
+    }
+    div ul{
+        display: flex;
+        padding-top: 5rem;
+        flex-direction: column;
+        align-items: center;
+        width: 89vw;
+        height: auto;
+    }
+    div ul li{
+        border: 1px solid green;
+        width: 80vw;
+        height: auto;
+    }
+       .rodape{
+        position: static;
+    }
+    .rodape p{
+        font-size: clamp(0.5rem, 1.5vh, 3rem);
+    }
+}
+/*---------------TELAS DE ATÉ 767px - (SMARTHPHONES) -------------*/
+@media (max-width: 780px){
+    #nave{
+        padding-right: 5rem;
+        padding-left: 3rem;
+        justify-content: center;
+        height: auto;
+    }
+    #links{
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    #links a{
+        font-size: clamp(0.5rem, 1.3vh, 3rem);
+    }
+    #icone{
+        display: none;
+    }
+    #luz{
+        display: flex;
+        padding: 0.1rem;
+    }  
+}
