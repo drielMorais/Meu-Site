@@ -249,10 +249,11 @@ body.escuro p{
     #links a{
         font-size: clamp(0.5rem, 1.3vh, 3rem);
     }
+    .Blocos2{
+        height: auto;
+    }
     .link2{
-        position: absolute;
-        bottom: -27rem;
-
+        padding: 1rem 0 0;
     }
     #icone{
         display: none;
